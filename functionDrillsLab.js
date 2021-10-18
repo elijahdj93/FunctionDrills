@@ -5,7 +5,11 @@
 */
 
 //CODE HERE
+function helloWorld(){
+  console.log('Hello World!')
+}
 
+helloWorld()
 
 ////////////////// PROBLEM 2 ////////////////////
 /*
@@ -15,7 +19,11 @@
 */
 
 //CODE HERE
+function printName(name){
+  console.log(name)
+}
 
+printName('Elijah')
 
 ////////////////// PROBLEM 3 ////////////////////
 /*
@@ -29,6 +37,10 @@
 */
 
 //CODE HERE
+function greeting(name){
+  console.log(`Hello, ${name}`)
+}
+greeting('Elijah')
 
 
 ////////////////// PROBLEM 4 ////////////////////
@@ -40,7 +52,13 @@
 */
 
 //CODE HERE
-
+function add(num1, num2){
+  Number(num1)
+  Number(num2)
+  return num1 + num2
+}
+let sum = add(5,5)
+console.log(sum)
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
@@ -52,7 +70,17 @@
 */
 
 //CODE HERE
-
+function nameCheck(name){
+  if (name === 'Steven'){
+    return `What's up Steven`
+  } else if (name === 'Bryan'){
+    return `Hey Bryan`
+  } else {
+    return `Cool name, ${name}`
+  }
+}
+let nameGreeting = nameCheck('Steven')
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -65,7 +93,19 @@
 */
 
 //CODE HERE
-
+function faveColorFinder(color){
+  if (color === 'red'){
+    return "red is a great color"
+  } else if (color === 'green'){
+    return "green is a solid favorite color"
+  } else if (color === 'black'){
+    return "so trendy"
+  } else {
+    return " you need to evaluate your favorite color choice"
+  }
+}
+let colorRating = faveColorFinder('green')
+console.log(colorRating)
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -76,7 +116,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
-
+function printAllNames(arr){
+  for (let i = 0; i < arr.length; i++){
+    console.log(arr[i])
+  }
+}
+printAllNames(namesArr)
 
 ////////////////// PROBLEM 8 ////////////////////
 /*
@@ -87,7 +132,16 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function thatsOdd(num){
+  if (num % 2 === 0){
+    return "That's not odd"
+  } else {
+    return "That is odd indeed!"
+  }
+}
 
+let oddChecker = thatsOdd(3)
+console.log(oddChecker)
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -101,6 +155,21 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall(arr){
+  let answers = []
+  for (let i = 0; i < arr.length; i++){
+    if (arr[i] > 100){
+      answers.push('big')
+    } else {
+      answers.push('small')
+    }
+  }
+  return answers
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+console.log(arrayEvaluator)
+
 
 
 ////////////////// PROBLEM 10 ////////////////////
@@ -112,7 +181,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-
+function theEliminator(par1, par2){
+  for (let i = 0; i < par1.length; i++){
+    if (par1[i] == par2){
+      par1.splice(i,1)
+      return par1
+    } 
+    }
+  }
+console.log(theEliminator(contestants,loser))
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -122,7 +199,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function uppercase(str){
+  str = str.toUpperCase()
+  console.log(str)
+}
 
+uppercase(sampleString)
 
 ////////////////// PROBLEM 12 ////////////////////
 /*
@@ -135,6 +217,21 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+//CODE HERE
+function emailCheck(email){
+  String(email)
+  email.trim()
+  if (email.includes("@")){
+    return "Email verified"
+  } else {
+    return "Must provide a valid email"
+  }
+}
+
+console.log(emailCheck('  testemail@email.com         '))
+
+
+
 ////////////////// PROBLEM 13 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -142,6 +239,12 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function chocFrogs(amt){
+  let newAmt = amt/3
+  return newAmt
+}
+let totalFrogs = chocFrogs(10)
+console.log(totalFrogs)
 
 
 ////////////////// PROBLEM 14 ////////////////////
@@ -150,7 +253,13 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
-
+function chocFrogs2(amt){
+  let newAmt = amt/3
+  newAmt = Math.floor(newAmt)
+  return newAmt
+}
+let totalFrogs2 = chocFrogs2(10)
+console.log(totalFrogs2)
 
 ////////////////// PROBLEM 15 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
